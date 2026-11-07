@@ -19,3 +19,9 @@ jobs:
          password: ${{ secrets.UNITY_PASSWORD }}
          # serial: ${{ secrets.UNITY_SERIAL }} # Required for pro activations
          # configuration: ${{ secrets.UNITY_SERVICES_CONFIG }} # Required for floating license activations
+     - name: Upload a Build Artifact
+       uses: actions/upload-artifact@v7.0.2
+       with:
+          name: Unity_lic
+          Path: /home/runner/.local/share/unity3d/Unity/Unity_lic.ulf
+       
